@@ -1,0 +1,207 @@
+#root {
+  background-color: #ecf5ff;
+  max-width: 100%;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+main {
+  display: block;
+  padding-block: 1rem;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: #ecf5ff;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+span {
+  margin: 0 0.75rem;
+}
+
+hgroup {
+  margin: 0.25rem auto;
+  padding-block: 1rem;
+  border-radius: 1.25rem;
+  width: 80%;
+}
+
+/* Utilities */
+
+/* Homepage Title CSS */
+#home-main {
+  display: block;
+  height: 100%;
+  background-image: url("./assets/bg-home.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  background-color: rgba(91, 124, 153, 0.25);
+}
+
+#home-title {
+  margin: 2rem auto 0 auto;
+  padding: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+}
+
+#home-subtitle {
+  position: relative;
+  margin: 0 14em 0 auto;
+  padding: 0;
+  font-weight: 600;
+  font-style: italic;
+}
+
+#home-title > span {
+  display: block;
+  padding: 0.25rem 0.25rem 0 0.25rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to right, blue, red, purple);
+}
+
+/* Profile Section CSS */
+#profile-section-card {
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  padding: 1.5rem;
+  margin: 0.25rem auto;
+  background-color: rgba(0, 0, 0, 0.075);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  height: 100%;
+  width: 45%;
+  border-radius: 1rem;
+}
+
+#profile-content {
+  margin: 0 auto;
+  max-width: 100%;
+  min-height: 80%;
+  display: flex;
+  flex-direction: "row";
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  min-height: 35vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.profile-details {
+  font-weight: 600;
+  margin-block: 0.5rem;
+}
+
+.skills-array {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Responsive Profile Card CSS */
+@media (max-width: 41rem) {
+  #profile-section-card {
+    padding: 0.75rem 1rem;
+    margin: 0.25rem auto;
+    width: 75%;
+  }
+  #profile-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #profile-content > figure {
+    max-width: 160px;
+    min-height: auto;
+    margin: 0 auto;
+  }
+}
+
+.auth-form-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.25rem;
+}
+
+/* Job Card CSS */
+.jobcard-footer {
+  display: flex;
+  flex: 1 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+/* User Module CSS */
+/* Applied-Jobs CSS */
+
+.applied-jobs-table {
+  display: grid;
+  background-color: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  margin: 0.2rem auto;
+  padding: 0.5rem;
+  height: 100%;
+  width: 100%;
+  max-width: 90%;
+  min-width: fit-content;
+}
+
+/* Browse Jobs CSS */
+#jobs-jobcard-grid > div {
+  display: grid;
+  grid-row: repeat(6, 1fr);
+  grid-template-areas: "card1" "card2";
+  padding: 1rem;
+}
+
+#jobs-jobcard-grid > div:nth-child(even) {
+  grid-area: card1;
+}
+
+#jobs-jobcard-grid > div:nth-child(odd) {
+  grid-area: card2;
+}
+
+/* Admin Module CSS */
+/* Manage Job CSS */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 0.75rem;
+}
